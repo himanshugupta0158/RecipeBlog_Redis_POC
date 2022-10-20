@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redis-Recipes</title>
+</head>
+<body>
+    Here is the List of Recipes. <br>
+    <!-- {{recipes}} -->
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Category Name</th>
+                <th>Recipe Name</th>
+                <th>More info</th>
+            </tr>
+        </thead>
+        {% for recipe in recipes %}
+            <tr>
+                <td>{{recipe.category}}</td>
+                <td>{{recipe.name}}</td>
+                <td>
+                    <a href="{% url 'recipe' recipe.id %}">More Info</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
