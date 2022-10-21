@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redis-Recipes</title>
+    <title>Redis-Recipes Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 <body>
-    Here is the Details of Recipe. <br>
     <!-- {{recipes}} -->
 
-    <img src="{{recipe.image_url}}" height="50px", width="50px">
+    <!-- <img src="{{recipe.image_url}}" class="img-thumbnail" alt="{{recipe.name}}">
     <br>
     {{recipe.name}} <br>
     {{recipe.image_url}} <br>
-    {{recipe.description}}
+    {{recipe.description}} -->
+
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">{{recipe.name}}</h2>
+          <p class="lead">{{recipe.description}}</p>
+        </div>
+        <img src="{{recipe.image_url}}" class="bg-dark shadow-sm mx-auto" style="width: 60%; height: 500px; border-radius: 21px 21px 0 0;"/>
+      </div>
+    </div>
+  
     
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     </table>
 </body>
 </html>

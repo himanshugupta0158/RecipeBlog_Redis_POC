@@ -5,24 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redis-Recipes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
 <body>
-    Here is the List of Recipes. <br>
+    <!-- <h1>Here is the List of Recipes.</h1> <br><br> -->
     <!-- {{recipes}} -->
 
-    <table border="1">
+    <table class="mt-100 mr-auto mb-0 ml-auto   border-separate border-spacing-2 border border-slate-500 bg-indigo-400">
         <thead>
             <tr>
-                <th>Category Name</th>
-                <th>Recipe Name</th>
-                <th>More info</th>
+                <th colspan="3" class="border border-slate-600 m-5 p-2 text-center bg-gray-100 border-blue-100 font-mono" >Here is the List of Recipes</th>
+            </tr>
+            <tr>
+                <th class="border border-slate-600 m-5 p-2 text-center bg-gray-100 border-blue-100 font-mono" >Category Name</th>
+                <th class="border border-slate-600 m-5 p-2 text-center bg-gray-100 border-blue-100 font-mono" >Recipe Name</th>
+                <th class="border border-slate-600 m-5 p-2 text-center bg-gray-100 border-blue-100 font-mono" >More info</th>
             </tr>
         </thead>
         {% for recipe in recipes %}
             <tr>
-                <td>{{recipe.category}}</td>
-                <td>{{recipe.name}}</td>
-                <td>
+                <td class="border border-slate-600 m-5 p-2 text-center bg-gray-100 border-blue-100 font-mono" >{{recipe.category}}</td>
+                <td class="border border-slate-600 m-5 p-2 text-center bg-gray-100 border-blue-100 font-mono" >{{recipe.name}}</td>
+                <td class="border border-slate-600 m-5 p-2 text-center bg-gray-100 border-blue-100 font-mono text-blue-300" >
                     <a href="{% url 'recipe' recipe.id %}">More Info</a>
                 </td>
             </tr>
